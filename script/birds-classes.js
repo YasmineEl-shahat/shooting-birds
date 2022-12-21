@@ -36,7 +36,7 @@ export class Bird {
 
   fall() {
     let down = setInterval(() => {
-      if (top > window.innerHeight) {
+      if (this.top > window.innerHeight) {
         clearInterval(down);
         this.image.remove();
       }
