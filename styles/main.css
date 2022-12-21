@@ -10,6 +10,7 @@ body {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 @media screen and (max-width: 1300px) {
   body {
