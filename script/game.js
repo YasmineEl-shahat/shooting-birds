@@ -5,11 +5,13 @@ import { Bird } from "./birds-classes.js";
 const name = location.search.split("=")[1];
 let seconds = 59;
 let createBirdsInterval;
+let bombCreate;
 let birds = [];
 let paused = false;
 // selectors
 document.getElementById("name").innerText = name;
 let limit = document.getElementById("limit");
+let result = document.getElementById("result");
 
 // functions
 let timer = setInterval(function () {
@@ -19,6 +21,8 @@ let timer = setInterval(function () {
     clearInterval(timer);
     clearInterval(createBirdsInterval);
     clearInterval(bombCreate);
+    if (Bird.score >= 50) resultShow(true);
+    else resultShow(false);
   }
 }, 1000);
 
@@ -55,7 +59,7 @@ function killAll() {
   }, 100);
 
   // bomb creation
-  let bombCreate = setInterval(() => {
+  bombCreate = setInterval(() => {
     let bomb = document.createElement("img");
     bomb.src = "images/bomb.png";
     bomb.style.position = "absolute";
@@ -67,7 +71,7 @@ function killAll() {
     let fall = setInterval(() => {
       if (top > window.innerHeight) {
         clearInterval(fall);
-        this.image.remove();
+        bomb.remove();
       }
       top += 10;
 
@@ -84,3 +88,14 @@ function killAll() {
     };
   }, 5000);
 })();
+
+function resultShow(win) {
+  if (win) {
+    result.querySelector("h2").innerText = `You won
+    ,score:${Bird.score}
+    `;
+  } else {
+    result.querySelector("h2").innerText = "You lost";
+  }
+  result.style.display = "flex";
+}
