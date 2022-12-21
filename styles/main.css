@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: transparent;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url("/images/landing.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1300px) {
+  body {
+    background-size: auto;
+  }
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  border-radius: 10px;
+  padding: 20px 50px;
+  margin: 20px;
+}
+.gray-card {
+  background-color: rgba(170, 158, 158, 0.321);
+  text-align: center;
+  flex-direction: column;
+}
+.gray-card h2 {
+  text-transform: capitalize;
+  line-height: 40px;
+  font-size: 30px;
+}
+.gray-card input[type="text"] {
+  background: none;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  color: gray;
+}
+.gray-card button {
+  padding: 7px 30px;
+  border-radius: 20px;
+  margin-top: 10px;
+  font-size: 15px;
+  color: rgb(117, 184, 17);
+  font-weight: bold;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  justify-content: center;
+}
+.flex-between {
+  justify-content: space-between;
+}

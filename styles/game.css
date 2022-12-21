@@ -1,0 +1,11 @@
+.info-container {
+  margin: 1rem 10rem;
+  font-size: 1.5rem;
+  color: aqua;
+  text-transform: capitalize;
+}
+.info {
+  background-color: rgba(128, 128, 128, 0.584);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
