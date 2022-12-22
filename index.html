@@ -12,7 +12,14 @@
       <section class="card gray-card flex flex-center">
         <h2>Enter your name</h2>
         <form action="/game.html" method="get">
-          <input type="text" name="name" />
+          <input type="text" name="name" required />
+          <select name="level" required>
+            <option class="defult-option" value="" disabled selected>
+              select your level
+            </option>
+            <option value="level1">level 1</option>
+            <option value="level2">level 2</option>
+          </select>
           <button type="submit">Go</button>
         </form>
       </section>

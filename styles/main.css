@@ -38,7 +38,8 @@ body {
   line-height: 40px;
   font-size: 30px;
 }
-.gray-card input[type="text"] {
+.gray-card input[type="text"],
+select {
   background: none;
   border-radius: 5px;
   padding: 2px;
@@ -46,6 +47,11 @@ body {
   font-weight: 500;
   display: block;
   color: gray;
+  margin: 1rem 0;
+  width: 100%;
+}
+.defult-option {
+  display: none;
 }
 .gray-card button {
   padding: 7px 30px;

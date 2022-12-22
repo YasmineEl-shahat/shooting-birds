@@ -2,7 +2,10 @@ import { birdsData } from "./birds-module.js";
 import { Bird } from "./birds-classes.js";
 
 // variables
-const name = location.search.split("=")[1];
+
+const name = location.search.split("&")[0].split("=")[1];
+const level = location.search.split("&")[1].split("=")[1];
+const speed = level == "level1" ? 20 : 10;
 let seconds = 59;
 let createBirdsInterval;
 let bombCreate;
@@ -10,6 +13,7 @@ let birds = [];
 let paused = false;
 // selectors
 document.getElementById("name").innerText = name;
+document.getElementById("level").innerText = level;
 let limit = document.getElementById("limit");
 let result = document.getElementById("result");
 
@@ -39,6 +43,8 @@ $(function () {
 });
 
 (function () {
+  document.getElementById("myAudio").play();
+
   createBirdsInterval = setInterval(function () {
     if (!paused) {
       let bird = birdsData[Math.floor(Math.random() * 3)];
@@ -59,7 +65,7 @@ $(function () {
             birds.splice(birds.indexOf(birdObject), 1);
             birdObject.image.remove();
           }
-        }, 10);
+        }, speed);
       }, 100);
     }
   }, 100);
@@ -84,6 +90,7 @@ $(function () {
       bomb.style.top = top + "px";
     }, 10);
     bomb.onclick = function () {
+      document.getElementById("bombAudio").play();
       bomb.src = "images/fire.gif";
       paused = true;
       killAll();
@@ -103,6 +110,6 @@ function resultShow(win) {
   } else {
     result.querySelector("h2").innerText = "You lost";
   }
-  result.querySelector("a").href = `game.html?name=${name}`;
+  result.querySelector("a").href = `game.html?name=${name}&level=${level}`;
   result.style.display = "flex";
 }

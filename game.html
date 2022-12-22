@@ -12,8 +12,18 @@
   </head>
   <body>
     <main>
+      <audio id="myAudio" controls>
+        <source src="/sounds/bgmusic.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="killAudio" controls>
+        <source src="/sounds/kill.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="bombAudio" controls>
+        <source src="/sounds/bomb.mp3" type="audio/mpeg" />
+      </audio>
       <section class="flex flex-between info-container">
         <div class="info">welcome : <span id="name"></span></div>
+        <div class="info">Level : <span id="level"></span></div>
         <div class="info">score : <span id="score">0</span></div>
         <div class="info">time limit : 0:<span id="limit">59</span></div>
         <div class="info">birds killed : <span id="birds">0</span></div>

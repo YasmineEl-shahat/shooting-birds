@@ -42,6 +42,7 @@ export class Bird {
     }, 10);
   }
   kill(obj) {
+    document.getElementById("killAudio").play();
     obj.image.src = "images/dead.gif";
     obj.fall();
     Bird.#count++;

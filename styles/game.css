@@ -9,6 +9,9 @@
   border-radius: 2rem;
   padding: 0.5rem 1rem;
 }
+audio {
+  display: none;
+}
 .pop {
   position: fixed;
   z-index: 6;
