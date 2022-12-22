@@ -18,6 +18,7 @@ let timer = setInterval(function () {
   seconds -= 1;
   limit.innerText = seconds;
   if (seconds == 0) {
+    $("*").css("cursor", "");
     clearInterval(timer);
     clearInterval(createBirdsInterval);
     clearInterval(bombCreate);
@@ -32,6 +33,10 @@ function killAll() {
   });
   birds = [];
 }
+
+$(function () {
+  $("*").css("cursor", "url(images/cursor.png),auto");
+});
 
 (function () {
   createBirdsInterval = setInterval(function () {
@@ -52,6 +57,7 @@ function killAll() {
           } else {
             clearInterval(rightInterval);
             birds.splice(birds.indexOf(birdObject), 1);
+            birdObject.image.remove();
           }
         }, 10);
       }, 100);
@@ -92,10 +98,11 @@ function killAll() {
 function resultShow(win) {
   if (win) {
     result.querySelector("h2").innerText = `You won
-    ,score:${Bird.score}
+    score:${Bird.score}
     `;
   } else {
     result.querySelector("h2").innerText = "You lost";
   }
+  result.querySelector("a").href = `game.html?name=${name}`;
   result.style.display = "flex";
 }

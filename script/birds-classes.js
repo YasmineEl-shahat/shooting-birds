@@ -26,12 +26,8 @@ export class Bird {
   }
 
   moveRight(value) {
-    if (this.left < window.innerWidth) {
-      this.left += value;
-      this.image.style.left = this.left + "px";
-    } else {
-      this.image.remove();
-    }
+    this.left += value;
+    this.image.style.left = this.left + "px";
   }
 
   fall() {

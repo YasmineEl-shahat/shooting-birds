@@ -13,4 +13,19 @@
   position: fixed;
   z-index: 6;
   display: none;
+  width: 30%;
+  height: 50%;
+  font-size: 1.5rem;
+}
+.pop h2 {
+  font-size: 2.5rem;
+}
+.pop button {
+  margin: 2rem 0;
+}
+.shoot {
+  cursor: url("images/cursor.png");
+}
+body {
+  cursor: url("images/cursor.png");
 }
