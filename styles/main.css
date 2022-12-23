@@ -21,13 +21,14 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -50%);
 }
 .card {
   border-radius: 10px;
   padding: 20px 50px;
   margin: 20px;
 }
+
 .gray-card {
   background-color: rgba(170, 158, 158, 0.321);
   text-align: center;
@@ -49,6 +50,10 @@ select {
   color: gray;
   margin: 1rem 0;
   width: 100%;
+}
+select,
+option {
+  cursor: pointer;
 }
 .defult-option {
   display: none;
@@ -73,4 +78,51 @@ select {
 }
 .flex-between {
   justify-content: space-between;
+}
+
+.span-info {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 985px) {
+  .main {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 893px) {
+  .gray-card h2,
+  .span-info {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 602px) {
+  .gray-card h2,
+  .span-info {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (max-width: 468px) {
+  .main {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 410px) {
+  .main {
+    width: 90%;
+  }
+  .card {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .main {
+    width: 100%;
+  }
 }

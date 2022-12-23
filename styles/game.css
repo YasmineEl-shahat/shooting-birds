@@ -8,6 +8,7 @@
   background-color: rgba(128, 128, 128, 0.584);
   border-radius: 2rem;
   padding: 0.5rem 1rem;
+  margin: 0.1rem;
 }
 audio {
   display: none;
@@ -31,4 +32,43 @@ audio {
 }
 body {
   cursor: url("images/cursor.png");
+}
+@media screen and (max-width: 1290px) {
+  .info-container {
+    margin: 1rem 2rem;
+  }
+  .pop {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 990px) {
+  .info-container {
+    font-size: 1rem;
+  }
+  .pop {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 708px) {
+  .info-container {
+    font-size: 0.7rem;
+  }
+  .pop {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 565px) {
+  .pop {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pop {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 330px) {
+  .pop {
+    width: 90%;
+  }
 }

@@ -39,12 +39,11 @@ function killAll() {
 }
 
 $(function () {
+  document.getElementById("myAudio").play();
   $("*").css("cursor", "url(images/cursor.png),auto");
 });
 
 (function () {
-  document.getElementById("myAudio").play();
-
   createBirdsInterval = setInterval(function () {
     if (!paused) {
       let bird = birdsData[Math.floor(Math.random() * 3)];
