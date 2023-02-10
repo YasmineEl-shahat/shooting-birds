@@ -4,7 +4,7 @@ import { Bird } from "./birds-classes.js";
 // variables
 const name = location.search.split("&")[0].split("=")[1];
 const level = location.search.split("&")[1].split("=")[1];
-const speed = level == "level1" ? 20 : 10;
+const speed = level == "level1" ? 50 : 30;
 let seconds = 59;
 let createBirdsInterval;
 let bombCreate;
