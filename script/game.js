@@ -2,7 +2,6 @@ import { birdsData } from "./birds-module.js";
 import { Bird } from "./birds-classes.js";
 
 // variables
-
 const name = location.search.split("&")[0].split("=")[1];
 const level = location.search.split("&")[1].split("=")[1];
 const speed = level == "level1" ? 20 : 10;
@@ -11,6 +10,7 @@ let createBirdsInterval;
 let bombCreate;
 let birds = [];
 let paused = false;
+
 // selectors
 document.getElementById("name").innerText = name;
 document.getElementById("level").innerText = level;
